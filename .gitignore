@@ -1,9 +1,4 @@
 node_modules
 npm-debug.log
-platforms
-plugins
-hooks
 .DS_Store
-dist
 .idea
-www

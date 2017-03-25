@@ -1,5 +1,5 @@
 /**
- * DIC API
+ * dic-client
  * Move your app forward with the diabetesincontrol API
  *
  * OpenAPI spec version: 1.0.0
@@ -20,10 +20,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.DicApi) {
-      root.DicApi = {};
+    if (!root.DicClient) {
+      root.DicClient = {};
     }
-    root.DicApi.Error = factory(root.DicApi.ApiClient);
+    root.DicClient.Error = factory(root.DicClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';

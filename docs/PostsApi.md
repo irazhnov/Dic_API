@@ -1,4 +1,4 @@
-# DicApi.PostsApi
+# DicClient.PostsApi
 
 All URIs are relative to *http://dev.diabetesincontrol.com/*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="diabetesTherapiesGet"></a>
 # **diabetesTherapiesGet**
-> [Feed] diabetesTherapiesGet(json)
+> Feed diabetesTherapiesGet(json)
 
 List Posts
 
@@ -17,9 +17,9 @@ posts list
 
 ### Example
 ```javascript
-var DicApi = require('dic_api');
+var DicClient = require('dic_client');
 
-var apiInstance = new DicApi.PostsApi();
+var apiInstance = new DicClient.PostsApi();
 
 var json = 1.2; // Number | Scope under which the request is made; determines fields present in response.
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Feed]**](Feed.md)
+[**Feed**](Feed.md)
 
 ### Authorization
 

@@ -1,5 +1,5 @@
 /**
- * DIC API
+ * dic-client
  * Move your app forward with the diabetesincontrol API
  *
  * OpenAPI spec version: 1.0.0
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DicApi);
+    factory(root.expect, root.DicClient);
   }
-}(this, function(expect, DicApi) {
+}(this, function(expect, DicClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DicApi.Error();
+    instance = new DicClient.Error();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +50,25 @@
   describe('Error', function() {
     it('should create an instance of Error', function() {
       // uncomment below and update the code to test Error
-      //var instane = new DicApi.Error();
-      //expect(instance).to.be.a(DicApi.Error);
+      //var instane = new DicClient.Error();
+      //expect(instance).to.be.a(DicClient.Error);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instane = new DicApi.Error();
+      //var instane = new DicClient.Error();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new DicApi.Error();
+      //var instane = new DicClient.Error();
       //expect(instance).to.be();
     });
 
     it('should have the property fields (base name: "fields")', function() {
       // uncomment below and update the code to test the property fields
-      //var instane = new DicApi.Error();
+      //var instane = new DicClient.Error();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# DicApi.Author
+# DicClient.Author
 
 ## Properties
 Name | Type | Description | Notes

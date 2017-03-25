@@ -1,4 +1,4 @@
-# DicApi.Error
+# DicClient.Error
 
 ## Properties
 Name | Type | Description | Notes

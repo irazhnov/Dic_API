@@ -1,5 +1,5 @@
 /**
- * DIC API
+ * dic-client
  * Move your app forward with the diabetesincontrol API
  *
  * OpenAPI spec version: 1.0.0
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DicApi);
+    factory(root.expect, root.DicClient);
   }
-}(this, function(expect, DicApi) {
+}(this, function(expect, DicClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DicApi.Author();
+    instance = new DicClient.Author();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,55 +50,55 @@
   describe('Author', function() {
     it('should create an instance of Author', function() {
       // uncomment below and update the code to test Author
-      //var instane = new DicApi.Author();
-      //expect(instance).to.be.a(DicApi.Author);
+      //var instane = new DicClient.Author();
+      //expect(instance).to.be.a(DicClient.Author);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new DicApi.Author();
+      //var instane = new DicClient.Author();
       //expect(instance).to.be();
     });
 
     it('should have the property slug (base name: "slug")', function() {
       // uncomment below and update the code to test the property slug
-      //var instane = new DicApi.Author();
+      //var instane = new DicClient.Author();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new DicApi.Author();
+      //var instane = new DicClient.Author();
       //expect(instance).to.be();
     });
 
     it('should have the property firstName (base name: "first_name")', function() {
       // uncomment below and update the code to test the property firstName
-      //var instane = new DicApi.Author();
+      //var instane = new DicClient.Author();
       //expect(instance).to.be();
     });
 
     it('should have the property lastName (base name: "last_name")', function() {
       // uncomment below and update the code to test the property lastName
-      //var instane = new DicApi.Author();
+      //var instane = new DicClient.Author();
       //expect(instance).to.be();
     });
 
     it('should have the property nickname (base name: "nickname")', function() {
       // uncomment below and update the code to test the property nickname
-      //var instane = new DicApi.Author();
+      //var instane = new DicClient.Author();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new DicApi.Author();
+      //var instane = new DicClient.Author();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new DicApi.Author();
+      //var instane = new DicClient.Author();
       //expect(instance).to.be();
     });
 

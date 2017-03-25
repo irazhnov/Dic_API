@@ -1,5 +1,5 @@
 /**
- * DIC API
+ * dic-client
  * Move your app forward with the diabetesincontrol API
  *
  * OpenAPI spec version: 1.0.0
@@ -20,15 +20,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DicApi);
+    factory(root.expect, root.DicClient);
   }
-}(this, function(expect, DicApi) {
+}(this, function(expect, DicClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DicApi.PostsApi();
+    instance = new DicClient.PostsApi();
   });
 
   var getProperty = function(object, getter, property) {

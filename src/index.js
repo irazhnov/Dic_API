@@ -1,5 +1,5 @@
 /**
- * DIC API
+ * dic-client
  * Move your app forward with the diabetesincontrol API
  *
  * OpenAPI spec version: 1.0.0
@@ -14,12 +14,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Activities', 'model/Activity', 'model/Author', 'model/Category', 'model/Error', 'model/Feed', 'model/FeedCategory', 'model/Post', 'model/PriceEstimate', 'model/Product', 'model/Profile', 'api/EstimatesApi', 'api/PostsApi', 'api/UserApi'], factory);
+    define(['ApiClient', 'model/Author', 'model/Category', 'model/Error', 'model/Feed', 'model/FeedCategory', 'model/Post', 'api/PostsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Activities'), require('./model/Activity'), require('./model/Author'), require('./model/Category'), require('./model/Error'), require('./model/Feed'), require('./model/FeedCategory'), require('./model/Post'), require('./model/PriceEstimate'), require('./model/Product'), require('./model/Profile'), require('./api/EstimatesApi'), require('./api/PostsApi'), require('./api/UserApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Author'), require('./model/Category'), require('./model/Error'), require('./model/Feed'), require('./model/FeedCategory'), require('./model/Post'), require('./api/PostsApi'));
   }
-}(function(ApiClient, Activities, Activity, Author, Category, Error, Feed, FeedCategory, Post, PriceEstimate, Product, Profile, EstimatesApi, PostsApi, UserApi) {
+}(function(ApiClient, Author, Category, Error, Feed, FeedCategory, Post, PostsApi) {
   'use strict';
 
   /**
@@ -28,9 +28,9 @@
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var DicApi = require('index'); // See note below*.
-   * var xxxSvc = new DicApi.XxxApi(); // Allocate the API class we're going to use.
-   * var yyyModel = new DicApi.Yyy(); // Construct a model instance.
+   * var DicClient = require('index'); // See note below*.
+   * var xxxSvc = new DicClient.XxxApi(); // Allocate the API class we're going to use.
+   * var yyyModel = new DicClient.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -42,8 +42,8 @@
    * <p>
    * A non-AMD browser application (discouraged) might do something like this:
    * <pre>
-   * var xxxSvc = new DicApi.XxxApi(); // Allocate the API class we're going to use.
-   * var yyy = new DicApi.Yyy(); // Construct a model instance.
+   * var xxxSvc = new DicClient.XxxApi(); // Allocate the API class we're going to use.
+   * var yyy = new DicClient.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -59,16 +59,6 @@
      * @property {module:ApiClient}
      */
     ApiClient: ApiClient,
-    /**
-     * The Activities model constructor.
-     * @property {module:model/Activities}
-     */
-    Activities: Activities,
-    /**
-     * The Activity model constructor.
-     * @property {module:model/Activity}
-     */
-    Activity: Activity,
     /**
      * The Author model constructor.
      * @property {module:model/Author}
@@ -100,35 +90,10 @@
      */
     Post: Post,
     /**
-     * The PriceEstimate model constructor.
-     * @property {module:model/PriceEstimate}
-     */
-    PriceEstimate: PriceEstimate,
-    /**
-     * The Product model constructor.
-     * @property {module:model/Product}
-     */
-    Product: Product,
-    /**
-     * The Profile model constructor.
-     * @property {module:model/Profile}
-     */
-    Profile: Profile,
-    /**
-     * The EstimatesApi service constructor.
-     * @property {module:api/EstimatesApi}
-     */
-    EstimatesApi: EstimatesApi,
-    /**
      * The PostsApi service constructor.
      * @property {module:api/PostsApi}
      */
-    PostsApi: PostsApi,
-    /**
-     * The UserApi service constructor.
-     * @property {module:api/UserApi}
-     */
-    UserApi: UserApi
+    PostsApi: PostsApi
   };
 
   return exports;

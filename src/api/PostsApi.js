@@ -49,7 +49,7 @@
      * Callback function to receive the result of the diabetesTherapiesGet operation.
      * @callback module:api/PostsApi~diabetesTherapiesGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/Feed>} data The data returned by the service call.
+     * @param {module:model/Feed} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -58,7 +58,7 @@
      * posts list 
      * @param {Number} json Scope under which the request is made; determines fields present in response.
      * @param {module:api/PostsApi~diabetesTherapiesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/Feed>}
+     * data is of type: {@link module:model/Feed}
      */
     this.diabetesTherapiesGet = function(json, callback) {
       var postBody = null;
@@ -82,7 +82,7 @@
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [Feed];
+      var returnType = Feed;
 
       return this.apiClient.callApi(
         '/diabetes-therapies', 'GET',

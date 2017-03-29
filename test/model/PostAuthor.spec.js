@@ -39,7 +39,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SomeClient.Category();
+    instance = new SomeClient.PostAuthor();
   });
 
   var getProperty = function(object, getter, property) {
@@ -58,46 +58,58 @@
       object[property] = value;
   }
 
-  describe('Category', function() {
-    it('should create an instance of Category', function() {
-      // uncomment below and update the code to test Category
-      //var instane = new SomeClient.Category();
-      //expect(instance).to.be.a(SomeClient.Category);
+  describe('PostAuthor', function() {
+    it('should create an instance of PostAuthor', function() {
+      // uncomment below and update the code to test PostAuthor
+      //var instane = new SomeClient.PostAuthor();
+      //expect(instance).to.be.a(SomeClient.PostAuthor);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SomeClient.Category();
+      //var instane = new SomeClient.PostAuthor();
       //expect(instance).to.be();
     });
 
     it('should have the property slug (base name: "slug")', function() {
       // uncomment below and update the code to test the property slug
-      //var instane = new SomeClient.Category();
+      //var instane = new SomeClient.PostAuthor();
       //expect(instance).to.be();
     });
 
-    it('should have the property title (base name: "title")', function() {
-      // uncomment below and update the code to test the property title
-      //var instane = new SomeClient.Category();
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new SomeClient.PostAuthor();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property firstName (base name: "first_name")', function() {
+      // uncomment below and update the code to test the property firstName
+      //var instane = new SomeClient.PostAuthor();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property lastName (base name: "last_name")', function() {
+      // uncomment below and update the code to test the property lastName
+      //var instane = new SomeClient.PostAuthor();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property nickname (base name: "nickname")', function() {
+      // uncomment below and update the code to test the property nickname
+      //var instane = new SomeClient.PostAuthor();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
+      //var instane = new SomeClient.PostAuthor();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new SomeClient.Category();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property parent (base name: "parent")', function() {
-      // uncomment below and update the code to test the property parent
-      //var instane = new SomeClient.Category();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property postCount (base name: "post_count")', function() {
-      // uncomment below and update the code to test the property postCount
-      //var instane = new SomeClient.Category();
+      //var instane = new SomeClient.PostAuthor();
       //expect(instance).to.be();
     });
 

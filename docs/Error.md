@@ -1,9 +1,9 @@
-# DicClient.Error
+# SomeClient.Error
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**code** | **Number** |  | [optional] 
+**code** | **Integer** |  | [optional] 
 **message** | **String** |  | [optional] 
 **fields** | **String** |  | [optional] 
 

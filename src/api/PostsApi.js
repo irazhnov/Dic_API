@@ -9,6 +9,17 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
@@ -20,10 +31,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/Error'), require('../model/Feed'));
   } else {
     // Browser globals (root is window)
-    if (!root.DicClient) {
-      root.DicClient = {};
+    if (!root.SomeClient) {
+      root.SomeClient = {};
     }
-    root.DicClient.PostsApi = factory(root.DicClient.ApiClient, root.DicClient.Error, root.DicClient.Feed);
+    root.SomeClient.PostsApi = factory(root.SomeClient.ApiClient, root.SomeClient.Error, root.SomeClient.Feed);
   }
 }(this, function(ApiClient, Error, Feed) {
   'use strict';
@@ -45,27 +56,19 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the diabetesTherapiesGet operation.
-     * @callback module:api/PostsApi~diabetesTherapiesGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Feed} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * List Posts
      * posts list 
      * @param {Number} json Scope under which the request is made; determines fields present in response.
-     * @param {module:api/PostsApi~diabetesTherapiesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Feed}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Feed}
      */
-    this.diabetesTherapiesGet = function(json, callback) {
+    this.diabetesTherapiesGet = function(json) {
       var postBody = null;
 
       // verify the required parameter 'json' is set
       if (json == undefined || json == null) {
-        throw new Error("Missing the required parameter 'json' when calling diabetesTherapiesGet");
+        throw "Missing the required parameter 'json' when calling diabetesTherapiesGet";
       }
 
 
@@ -87,7 +90,7 @@
       return this.apiClient.callApi(
         '/diabetes-therapies', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
   };

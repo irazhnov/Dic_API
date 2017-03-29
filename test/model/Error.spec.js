@@ -9,6 +9,17 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
@@ -20,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DicClient);
+    factory(root.expect, root.SomeClient);
   }
-}(this, function(expect, DicClient) {
+}(this, function(expect, SomeClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DicClient.Error();
+    instance = new SomeClient.Error();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,25 +61,25 @@
   describe('Error', function() {
     it('should create an instance of Error', function() {
       // uncomment below and update the code to test Error
-      //var instane = new DicClient.Error();
-      //expect(instance).to.be.a(DicClient.Error);
+      //var instane = new SomeClient.Error();
+      //expect(instance).to.be.a(SomeClient.Error);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instane = new DicClient.Error();
+      //var instane = new SomeClient.Error();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new DicClient.Error();
+      //var instane = new SomeClient.Error();
       //expect(instance).to.be();
     });
 
     it('should have the property fields (base name: "fields")', function() {
       // uncomment below and update the code to test the property fields
-      //var instane = new DicClient.Error();
+      //var instane = new SomeClient.Error();
       //expect(instance).to.be();
     });
 

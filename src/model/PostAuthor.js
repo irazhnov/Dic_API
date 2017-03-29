@@ -34,7 +34,7 @@
     if (!root.SomeClient) {
       root.SomeClient = {};
     }
-    root.SomeClient.Author = factory(root.SomeClient.ApiClient);
+    root.SomeClient.PostAuthor = factory(root.SomeClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -43,14 +43,14 @@
 
 
   /**
-   * The Author model module.
-   * @module model/Author
+   * The PostAuthor model module.
+   * @module model/PostAuthor
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new <code>Author</code>.
-   * @alias module:model/Author
+   * Constructs a new <code>PostAuthor</code>.
+   * @alias module:model/PostAuthor
    * @class
    */
   var exports = function() {
@@ -67,18 +67,18 @@
   };
 
   /**
-   * Constructs a <code>Author</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PostAuthor</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/Author} obj Optional instance to populate.
-   * @return {module:model/Author} The populated <code>Author</code> instance.
+   * @param {module:model/PostAuthor} obj Optional instance to populate.
+   * @return {module:model/PostAuthor} The populated <code>PostAuthor</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
       if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'String');
+        obj['id'] = ApiClient.convertToType(data['id'], 'Number');
       }
       if (data.hasOwnProperty('slug')) {
         obj['slug'] = ApiClient.convertToType(data['slug'], 'String');
@@ -90,59 +90,51 @@
         obj['first_name'] = ApiClient.convertToType(data['first_name'], 'String');
       }
       if (data.hasOwnProperty('last_name')) {
-        obj['last_name'] = ApiClient.convertToType(data['last_name'], 'Number');
+        obj['last_name'] = ApiClient.convertToType(data['last_name'], 'String');
       }
       if (data.hasOwnProperty('nickname')) {
-        obj['nickname'] = ApiClient.convertToType(data['nickname'], 'String');
+        obj['nickname'] = ApiClient.convertToType(data['nickname'], 'Number');
       }
       if (data.hasOwnProperty('url')) {
         obj['url'] = ApiClient.convertToType(data['url'], 'String');
       }
       if (data.hasOwnProperty('description')) {
-        obj['description'] = ApiClient.convertToType(data['description'], 'String');
+        obj['description'] = ApiClient.convertToType(data['description'], 'Number');
       }
     }
     return obj;
   }
 
   /**
-   * id.
-   * @member {String} id
+   * @member {Number} id
    */
   exports.prototype['id'] = undefined;
   /**
-   * slug.
    * @member {String} slug
    */
   exports.prototype['slug'] = undefined;
   /**
-   * title.
    * @member {String} name
    */
   exports.prototype['name'] = undefined;
   /**
-   * first_name.
    * @member {String} first_name
    */
   exports.prototype['first_name'] = undefined;
   /**
-   * last_name.
-   * @member {Number} last_name
+   * @member {String} last_name
    */
   exports.prototype['last_name'] = undefined;
   /**
-   * nickname.
-   * @member {String} nickname
+   * @member {Number} nickname
    */
   exports.prototype['nickname'] = undefined;
   /**
-   * url.
    * @member {String} url
    */
   exports.prototype['url'] = undefined;
   /**
-   * description.
-   * @member {String} description
+   * @member {Number} description
    */
   exports.prototype['description'] = undefined;
 

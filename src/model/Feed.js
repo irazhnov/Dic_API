@@ -9,23 +9,34 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/FeedCategory'], factory);
+    define(['ApiClient', 'model/FeedCategory', 'model/Post'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./FeedCategory'));
+    module.exports = factory(require('../ApiClient'), require('./FeedCategory'), require('./Post'));
   } else {
     // Browser globals (root is window)
-    if (!root.DicClient) {
-      root.DicClient = {};
+    if (!root.SomeClient) {
+      root.SomeClient = {};
     }
-    root.DicClient.Feed = factory(root.DicClient.ApiClient, root.DicClient.FeedCategory);
+    root.SomeClient.Feed = factory(root.SomeClient.ApiClient, root.SomeClient.FeedCategory, root.SomeClient.Post);
   }
-}(this, function(ApiClient, FeedCategory) {
+}(this, function(ApiClient, FeedCategory, Post) {
   'use strict';
 
 
@@ -44,6 +55,7 @@
    */
   var exports = function() {
     var _this = this;
+
 
 
 
@@ -74,22 +86,25 @@
       if (data.hasOwnProperty('category')) {
         obj['category'] = FeedCategory.constructFromObject(data['category']);
       }
+      if (data.hasOwnProperty('posts')) {
+        obj['posts'] = ApiClient.convertToType(data['posts'], [Post]);
+      }
     }
     return obj;
   }
 
   /**
-   * status
+   * status.
    * @member {String} status
    */
   exports.prototype['status'] = undefined;
   /**
-   * count
+   * count.
    * @member {Number} count
    */
   exports.prototype['count'] = undefined;
   /**
-   * pages
+   * pages.
    * @member {Number} pages
    */
   exports.prototype['pages'] = undefined;
@@ -97,6 +112,10 @@
    * @member {module:model/FeedCategory} category
    */
   exports.prototype['category'] = undefined;
+  /**
+   * @member {Array.<module:model/Post>} posts
+   */
+  exports.prototype['posts'] = undefined;
 
 
 

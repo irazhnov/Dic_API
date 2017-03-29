@@ -1,4 +1,4 @@
-# DicClient.PostsApi
+# SomeClient.PostsApi
 
 All URIs are relative to *http://dev.diabetesincontrol.com/*
 
@@ -17,21 +17,18 @@ posts list
 
 ### Example
 ```javascript
-var DicClient = require('dic_client');
+var SomeClient = require('some-client');
 
-var apiInstance = new DicClient.PostsApi();
+var apiInstance = new SomeClient.PostsApi();
 
 var json = 1.2; // Number | Scope under which the request is made; determines fields present in response.
 
+apiInstance.diabetesTherapiesGet(json).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.diabetesTherapiesGet(json, callback);
 ```
 
 ### Parameters

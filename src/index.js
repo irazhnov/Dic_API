@@ -9,17 +9,28 @@
  * https://github.com/swagger-api/swagger-codegen.git
  * Do not edit the class manually.
  *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
 
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Author', 'model/Category', 'model/Error', 'model/Feed', 'model/FeedCategory', 'model/Post', 'api/PostsApi'], factory);
+    define(['ApiClient', 'model/Author', 'model/Category', 'model/Error', 'model/Feed', 'model/FeedCategory', 'model/Post', 'model/PostAuthor', 'api/PostsApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Author'), require('./model/Category'), require('./model/Error'), require('./model/Feed'), require('./model/FeedCategory'), require('./model/Post'), require('./api/PostsApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Author'), require('./model/Category'), require('./model/Error'), require('./model/Feed'), require('./model/FeedCategory'), require('./model/Post'), require('./model/PostAuthor'), require('./api/PostsApi'));
   }
-}(function(ApiClient, Author, Category, Error, Feed, FeedCategory, Post, PostsApi) {
+}(function(ApiClient, Author, Category, Error, Feed, FeedCategory, Post, PostAuthor, PostsApi) {
   'use strict';
 
   /**
@@ -28,9 +39,9 @@
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var DicClient = require('index'); // See note below*.
-   * var xxxSvc = new DicClient.XxxApi(); // Allocate the API class we're going to use.
-   * var yyyModel = new DicClient.Yyy(); // Construct a model instance.
+   * var SomeClient = require('index'); // See note below*.
+   * var xxxSvc = new SomeClient.XxxApi(); // Allocate the API class we're going to use.
+   * var yyyModel = new SomeClient.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -42,8 +53,8 @@
    * <p>
    * A non-AMD browser application (discouraged) might do something like this:
    * <pre>
-   * var xxxSvc = new DicClient.XxxApi(); // Allocate the API class we're going to use.
-   * var yyy = new DicClient.Yyy(); // Construct a model instance.
+   * var xxxSvc = new SomeClient.XxxApi(); // Allocate the API class we're going to use.
+   * var yyy = new SomeClient.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -89,6 +100,11 @@
      * @property {module:model/Post}
      */
     Post: Post,
+    /**
+     * The PostAuthor model constructor.
+     * @property {module:model/PostAuthor}
+     */
+    PostAuthor: PostAuthor,
     /**
      * The PostsApi service constructor.
      * @property {module:api/PostsApi}

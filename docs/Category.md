@@ -1,4 +1,4 @@
-# SomeClient.Category
+# DicClient.Category
 
 ## Properties
 Name | Type | Description | Notes

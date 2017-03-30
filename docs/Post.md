@@ -1,4 +1,4 @@
-# SomeClient.Post
+# DicClient.Post
 
 ## Properties
 Name | Type | Description | Notes

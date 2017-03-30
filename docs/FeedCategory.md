@@ -1,4 +1,4 @@
-# SomeClient.FeedCategory
+# DicClient.FeedCategory
 
 ## Properties
 Name | Type | Description | Notes

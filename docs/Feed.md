@@ -1,4 +1,4 @@
-# SomeClient.Feed
+# DicClient.Feed
 
 ## Properties
 Name | Type | Description | Notes

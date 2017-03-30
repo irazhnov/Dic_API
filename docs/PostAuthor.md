@@ -1,4 +1,4 @@
-# SomeClient.PostAuthor
+# DicClient.PostAuthor
 
 ## Properties
 Name | Type | Description | Notes

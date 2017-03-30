@@ -31,10 +31,10 @@
     module.exports = factory(require('../ApiClient'), require('./Category'), require('./PostAuthor'));
   } else {
     // Browser globals (root is window)
-    if (!root.SomeClient) {
-      root.SomeClient = {};
+    if (!root.DicClient) {
+      root.DicClient = {};
     }
-    root.SomeClient.Post = factory(root.SomeClient.ApiClient, root.SomeClient.Category, root.SomeClient.PostAuthor);
+    root.DicClient.Post = factory(root.DicClient.ApiClient, root.DicClient.Category, root.DicClient.PostAuthor);
   }
 }(this, function(ApiClient, Category, PostAuthor) {
   'use strict';

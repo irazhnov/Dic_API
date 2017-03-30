@@ -31,10 +31,10 @@
     module.exports = factory(require('superagent'));
   } else {
     // Browser globals (root is window)
-    if (!root.SomeClient) {
-      root.SomeClient = {};
+    if (!root.DicClient) {
+      root.DicClient = {};
     }
-    root.SomeClient.ApiClient = factory(root.superagent);
+    root.DicClient.ApiClient = factory(root.superagent);
   }
 }(this, function(superagent) {
   'use strict';

@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SomeClient);
+    factory(root.expect, root.DicClient);
   }
-}(this, function(expect, SomeClient) {
+}(this, function(expect, DicClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SomeClient.Error();
+    instance = new DicClient.Error();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('Error', function() {
     it('should create an instance of Error', function() {
       // uncomment below and update the code to test Error
-      //var instane = new SomeClient.Error();
-      //expect(instance).to.be.a(SomeClient.Error);
+      //var instane = new DicClient.Error();
+      //expect(instance).to.be.a(DicClient.Error);
     });
 
     it('should have the property code (base name: "code")', function() {
       // uncomment below and update the code to test the property code
-      //var instane = new SomeClient.Error();
+      //var instane = new DicClient.Error();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new SomeClient.Error();
+      //var instane = new DicClient.Error();
       //expect(instance).to.be();
     });
 
     it('should have the property fields (base name: "fields")', function() {
       // uncomment below and update the code to test the property fields
-      //var instane = new SomeClient.Error();
+      //var instane = new DicClient.Error();
       //expect(instance).to.be();
     });
 

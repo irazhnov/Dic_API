@@ -55,9 +55,9 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default http://dev.diabetesincontrol.com/
+     * @default http://diabetesincontrol.com/
      */
-    this.basePath = 'http://dev.diabetesincontrol.com/'.replace(/\/+$/, '');
+    this.basePath = 'http://diabetesincontrol.com/'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.

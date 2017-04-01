@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SomeClient);
+    factory(root.expect, root.DicClient);
   }
-}(this, function(expect, SomeClient) {
+}(this, function(expect, DicClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SomeClient.PostsApi();
+    instance = new DicClient.CategoriesApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -58,11 +58,11 @@
       object[property] = value;
   }
 
-  describe('PostsApi', function() {
-    describe('diabetesTherapiesGet', function() {
-      it('should call diabetesTherapiesGet successfully', function(done) {
-        //uncomment below and update the code to test diabetesTherapiesGet
-        //instance.diabetesTherapiesGet(pet, function(error) {
+  describe('CategoriesApi', function() {
+    describe('categorySubcategoriesGet', function() {
+      it('should call categorySubcategoriesGet successfully', function(done) {
+        //uncomment below and update the code to test categorySubcategoriesGet
+        //instance.categorySubcategoriesGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

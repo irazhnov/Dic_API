@@ -25,12 +25,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Category', 'model/Error', 'model/Feed', 'model/FeedCategory', 'model/Post', 'model/PostAuthor', 'api/TherapiesApi'], factory);
+    define(['ApiClient', 'model/Category', 'model/Error', 'model/Feed', 'model/FeedCategory', 'model/Post', 'model/PostAuthor', 'api/CategoriesApi', 'api/TherapiesApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Category'), require('./model/Error'), require('./model/Feed'), require('./model/FeedCategory'), require('./model/Post'), require('./model/PostAuthor'), require('./api/TherapiesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Category'), require('./model/Error'), require('./model/Feed'), require('./model/FeedCategory'), require('./model/Post'), require('./model/PostAuthor'), require('./api/CategoriesApi'), require('./api/TherapiesApi'));
   }
-}(function(ApiClient, Category, Error, Feed, FeedCategory, Post, PostAuthor, TherapiesApi) {
+}(function(ApiClient, Category, Error, Feed, FeedCategory, Post, PostAuthor, CategoriesApi, TherapiesApi) {
   'use strict';
 
   /**
@@ -100,6 +100,11 @@
      * @property {module:model/PostAuthor}
      */
     PostAuthor: PostAuthor,
+    /**
+     * The CategoriesApi service constructor.
+     * @property {module:api/CategoriesApi}
+     */
+    CategoriesApi: CategoriesApi,
     /**
      * The TherapiesApi service constructor.
      * @property {module:api/TherapiesApi}

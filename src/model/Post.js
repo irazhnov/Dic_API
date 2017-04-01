@@ -64,6 +64,8 @@
 
 
 
+
+
   };
 
   /**
@@ -94,6 +96,12 @@
       }
       if (data.hasOwnProperty('thumbnail')) {
         obj['thumbnail'] = ApiClient.convertToType(data['thumbnail'], 'String');
+      }
+      if (data.hasOwnProperty('excerpt')) {
+        obj['excerpt'] = ApiClient.convertToType(data['excerpt'], 'String');
+      }
+      if (data.hasOwnProperty('date')) {
+        obj['date'] = ApiClient.convertToType(data['date'], 'String');
       }
       if (data.hasOwnProperty('categories')) {
         obj['categories'] = ApiClient.convertToType(data['categories'], [Category]);
@@ -134,6 +142,14 @@
    * @member {String} thumbnail
    */
   exports.prototype['thumbnail'] = undefined;
+  /**
+   * @member {String} excerpt
+   */
+  exports.prototype['excerpt'] = undefined;
+  /**
+   * @member {String} date
+   */
+  exports.prototype['date'] = undefined;
   /**
    * @member {Array.<module:model/Category>} categories
    */

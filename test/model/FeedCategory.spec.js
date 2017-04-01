@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SomeClient);
+    factory(root.expect, root.DicClient);
   }
-}(this, function(expect, SomeClient) {
+}(this, function(expect, DicClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SomeClient.FeedCategory();
+    instance = new DicClient.FeedCategory();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,43 +61,43 @@
   describe('FeedCategory', function() {
     it('should create an instance of FeedCategory', function() {
       // uncomment below and update the code to test FeedCategory
-      //var instane = new SomeClient.FeedCategory();
-      //expect(instance).to.be.a(SomeClient.FeedCategory);
+      //var instane = new DicClient.FeedCategory();
+      //expect(instance).to.be.a(DicClient.FeedCategory);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SomeClient.FeedCategory();
+      //var instane = new DicClient.FeedCategory();
       //expect(instance).to.be();
     });
 
     it('should have the property slug (base name: "slug")', function() {
       // uncomment below and update the code to test the property slug
-      //var instane = new SomeClient.FeedCategory();
+      //var instane = new DicClient.FeedCategory();
       //expect(instance).to.be();
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instane = new SomeClient.FeedCategory();
+      //var instane = new DicClient.FeedCategory();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new SomeClient.FeedCategory();
+      //var instane = new DicClient.FeedCategory();
       //expect(instance).to.be();
     });
 
     it('should have the property parent (base name: "parent")', function() {
       // uncomment below and update the code to test the property parent
-      //var instane = new SomeClient.FeedCategory();
+      //var instane = new DicClient.FeedCategory();
       //expect(instance).to.be();
     });
 
     it('should have the property postCount (base name: "post_count")', function() {
       // uncomment below and update the code to test the property postCount
-      //var instane = new SomeClient.FeedCategory();
+      //var instane = new DicClient.FeedCategory();
       //expect(instance).to.be();
     });
 

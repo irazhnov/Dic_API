@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SomeClient);
+    factory(root.expect, root.DicClient);
   }
-}(this, function(expect, SomeClient) {
+}(this, function(expect, DicClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SomeClient.Post();
+    instance = new DicClient.Post();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,55 +61,67 @@
   describe('Post', function() {
     it('should create an instance of Post', function() {
       // uncomment below and update the code to test Post
-      //var instane = new SomeClient.Post();
-      //expect(instance).to.be.a(SomeClient.Post);
+      //var instane = new DicClient.Post();
+      //expect(instance).to.be.a(DicClient.Post);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new SomeClient.Post();
+      //var instane = new DicClient.Post();
       //expect(instance).to.be();
     });
 
     it('should have the property slug (base name: "slug")', function() {
       // uncomment below and update the code to test the property slug
-      //var instane = new SomeClient.Post();
+      //var instane = new DicClient.Post();
       //expect(instance).to.be();
     });
 
     it('should have the property title (base name: "title")', function() {
       // uncomment below and update the code to test the property title
-      //var instane = new SomeClient.Post();
+      //var instane = new DicClient.Post();
       //expect(instance).to.be();
     });
 
     it('should have the property titlePlain (base name: "title_plain")', function() {
       // uncomment below and update the code to test the property titlePlain
-      //var instane = new SomeClient.Post();
+      //var instane = new DicClient.Post();
       //expect(instance).to.be();
     });
 
     it('should have the property content (base name: "content")', function() {
       // uncomment below and update the code to test the property content
-      //var instane = new SomeClient.Post();
+      //var instane = new DicClient.Post();
       //expect(instance).to.be();
     });
 
     it('should have the property thumbnail (base name: "thumbnail")', function() {
       // uncomment below and update the code to test the property thumbnail
-      //var instane = new SomeClient.Post();
+      //var instane = new DicClient.Post();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property excerpt (base name: "excerpt")', function() {
+      // uncomment below and update the code to test the property excerpt
+      //var instane = new DicClient.Post();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property _date (base name: "date")', function() {
+      // uncomment below and update the code to test the property _date
+      //var instane = new DicClient.Post();
       //expect(instance).to.be();
     });
 
     it('should have the property categories (base name: "categories")', function() {
       // uncomment below and update the code to test the property categories
-      //var instane = new SomeClient.Post();
+      //var instane = new DicClient.Post();
       //expect(instance).to.be();
     });
 
     it('should have the property author (base name: "author")', function() {
       // uncomment below and update the code to test the property author
-      //var instane = new SomeClient.Post();
+      //var instane = new DicClient.Post();
       //expect(instance).to.be();
     });
 

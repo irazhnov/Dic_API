@@ -1,6 +1,6 @@
 # DicClient.TherapiesApi
 
-All URIs are relative to *http://dev.diabetesincontrol.com/*
+All URIs are relative to *http://diabetesincontrol.com/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

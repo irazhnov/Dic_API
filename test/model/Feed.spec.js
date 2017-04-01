@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.SomeClient);
+    factory(root.expect, root.DicClient);
   }
-}(this, function(expect, SomeClient) {
+}(this, function(expect, DicClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new SomeClient.Feed();
+    instance = new DicClient.Feed();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,37 +61,37 @@
   describe('Feed', function() {
     it('should create an instance of Feed', function() {
       // uncomment below and update the code to test Feed
-      //var instane = new SomeClient.Feed();
-      //expect(instance).to.be.a(SomeClient.Feed);
+      //var instane = new DicClient.Feed();
+      //expect(instance).to.be.a(DicClient.Feed);
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new SomeClient.Feed();
+      //var instane = new DicClient.Feed();
       //expect(instance).to.be();
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new SomeClient.Feed();
+      //var instane = new DicClient.Feed();
       //expect(instance).to.be();
     });
 
     it('should have the property pages (base name: "pages")', function() {
       // uncomment below and update the code to test the property pages
-      //var instane = new SomeClient.Feed();
+      //var instane = new DicClient.Feed();
       //expect(instance).to.be();
     });
 
     it('should have the property category (base name: "category")', function() {
       // uncomment below and update the code to test the property category
-      //var instane = new SomeClient.Feed();
+      //var instane = new DicClient.Feed();
       //expect(instance).to.be();
     });
 
     it('should have the property posts (base name: "posts")', function() {
       // uncomment below and update the code to test the property posts
-      //var instane = new SomeClient.Feed();
+      //var instane = new DicClient.Feed();
       //expect(instance).to.be();
     });
 

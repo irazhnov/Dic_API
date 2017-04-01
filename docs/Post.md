@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **titlePlain** | **String** | title_plain. | [optional] 
 **content** | **String** | content. | [optional] 
 **thumbnail** | **String** |  | [optional] 
+**excerpt** | **String** |  | [optional] 
+**_date** | **String** |  | [optional] 
 **categories** | [**[Category]**](Category.md) |  | [optional] 
 **author** | [**PostAuthor**](PostAuthor.md) |  | [optional] 
 

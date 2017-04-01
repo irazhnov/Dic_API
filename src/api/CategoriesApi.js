@@ -31,23 +31,23 @@
     module.exports = factory(require('../ApiClient'), require('../model/Error'), require('../model/Feed'));
   } else {
     // Browser globals (root is window)
-    if (!root.SomeClient) {
-      root.SomeClient = {};
+    if (!root.DicClient) {
+      root.DicClient = {};
     }
-    root.SomeClient.PostsApi = factory(root.SomeClient.ApiClient, root.SomeClient.Error, root.SomeClient.Feed);
+    root.DicClient.CategoriesApi = factory(root.DicClient.ApiClient, root.DicClient.Error, root.DicClient.Feed);
   }
 }(this, function(ApiClient, Error, Feed) {
   'use strict';
 
   /**
-   * Posts service.
-   * @module api/PostsApi
+   * Categories service.
+   * @module api/CategoriesApi
    * @version 1.0.0
    */
 
   /**
-   * Constructs a new PostsApi. 
-   * @alias module:api/PostsApi
+   * Constructs a new CategoriesApi. 
+   * @alias module:api/CategoriesApi
    * @class
    * @param {module:ApiClient} apiClient Optional API client implementation to use,
    * default to {@link module:ApiClient#instance} if unspecified.
@@ -58,21 +58,35 @@
 
 
     /**
-     * List Posts
-     * posts list 
-     * @param {Number} json Scope under which the request is made; determines fields present in response.
+     * Categories
+     * Categories
+     * @param {String} category 
+     * @param {String} subcategories 
+     * @param {Number} json 1 menu
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Feed}
      */
-    this.diabetesTherapiesGet = function(json) {
+    this.categorySubcategoriesGet = function(category, subcategories, json) {
       var postBody = null;
+
+      // verify the required parameter 'category' is set
+      if (category == undefined || category == null) {
+        throw "Missing the required parameter 'category' when calling categorySubcategoriesGet";
+      }
+
+      // verify the required parameter 'subcategories' is set
+      if (subcategories == undefined || subcategories == null) {
+        throw "Missing the required parameter 'subcategories' when calling categorySubcategoriesGet";
+      }
 
       // verify the required parameter 'json' is set
       if (json == undefined || json == null) {
-        throw "Missing the required parameter 'json' when calling diabetesTherapiesGet";
+        throw "Missing the required parameter 'json' when calling categorySubcategoriesGet";
       }
 
 
       var pathParams = {
+        'category': category,
+        'subcategories': subcategories
       };
       var queryParams = {
         'json': json
@@ -88,7 +102,7 @@
       var returnType = Feed;
 
       return this.apiClient.callApi(
-        '/diabetes-therapies', 'GET',
+        '/{category}/{subcategories}/', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );

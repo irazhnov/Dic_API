@@ -39,7 +39,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new DicClient.CategoriesApi();
+    instance = new DicClient.SearchFeed();
   });
 
   var getProperty = function(object, getter, property) {
@@ -58,17 +58,43 @@
       object[property] = value;
   }
 
-  describe('CategoriesApi', function() {
-    describe('categorySubcategoriesGet', function() {
-      it('should call categorySubcategoriesGet successfully', function(done) {
-        //uncomment below and update the code to test categorySubcategoriesGet
-        //instance.categorySubcategoriesGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('SearchFeed', function() {
+    it('should create an instance of SearchFeed', function() {
+      // uncomment below and update the code to test SearchFeed
+      //var instane = new DicClient.SearchFeed();
+      //expect(instance).to.be.a(DicClient.SearchFeed);
     });
+
+    it('should have the property status (base name: "status")', function() {
+      // uncomment below and update the code to test the property status
+      //var instane = new DicClient.SearchFeed();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property count (base name: "count")', function() {
+      // uncomment below and update the code to test the property count
+      //var instane = new DicClient.SearchFeed();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property countTotal (base name: "count_total")', function() {
+      // uncomment below and update the code to test the property countTotal
+      //var instane = new DicClient.SearchFeed();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property pages (base name: "pages")', function() {
+      // uncomment below and update the code to test the property pages
+      //var instane = new DicClient.SearchFeed();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property posts (base name: "posts")', function() {
+      // uncomment below and update the code to test the property posts
+      //var instane = new DicClient.SearchFeed();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

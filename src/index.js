@@ -25,12 +25,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Category', 'model/Error', 'model/Feed', 'model/FeedCategory', 'model/Post', 'model/PostAuthor', 'api/CategoriesApi', 'api/TherapiesApi'], factory);
+    define(['ApiClient', 'model/Category', 'model/Error', 'model/Feed', 'model/FeedCategory', 'model/Post', 'model/PostAuthor', 'model/SearchFeed', 'api/DefaultApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Category'), require('./model/Error'), require('./model/Feed'), require('./model/FeedCategory'), require('./model/Post'), require('./model/PostAuthor'), require('./api/CategoriesApi'), require('./api/TherapiesApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Category'), require('./model/Error'), require('./model/Feed'), require('./model/FeedCategory'), require('./model/Post'), require('./model/PostAuthor'), require('./model/SearchFeed'), require('./api/DefaultApi'));
   }
-}(function(ApiClient, Category, Error, Feed, FeedCategory, Post, PostAuthor, CategoriesApi, TherapiesApi) {
+}(function(ApiClient, Category, Error, Feed, FeedCategory, Post, PostAuthor, SearchFeed, DefaultApi) {
   'use strict';
 
   /**
@@ -101,15 +101,15 @@
      */
     PostAuthor: PostAuthor,
     /**
-     * The CategoriesApi service constructor.
-     * @property {module:api/CategoriesApi}
+     * The SearchFeed model constructor.
+     * @property {module:model/SearchFeed}
      */
-    CategoriesApi: CategoriesApi,
+    SearchFeed: SearchFeed,
     /**
-     * The TherapiesApi service constructor.
-     * @property {module:api/TherapiesApi}
+     * The DefaultApi service constructor.
+     * @property {module:api/DefaultApi}
      */
-    TherapiesApi: TherapiesApi
+    DefaultApi: DefaultApi
   };
 
   return exports;

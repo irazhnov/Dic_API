@@ -60,95 +60,36 @@
     /**
      * Categories
      * Categories
-     * @param {String} category 
-     * @param {String} subcategories 
-     * @param {Number} json 1 menu
+     * @param {String} slug 
+     * @param {Number} page what page number we ask.
+     * @param {Number} count number per page
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Feed}
      */
-    this.categorySubcategoriesGet = function(category, subcategories, json) {
+    this.getCategoryPostsGet = function(slug, page, count) {
       var postBody = null;
 
-      // verify the required parameter 'category' is set
-      if (category == undefined || category == null) {
-        throw "Missing the required parameter 'category' when calling categorySubcategoriesGet";
-      }
-
-      // verify the required parameter 'subcategories' is set
-      if (subcategories == undefined || subcategories == null) {
-        throw "Missing the required parameter 'subcategories' when calling categorySubcategoriesGet";
-      }
-
-      // verify the required parameter 'json' is set
-      if (json == undefined || json == null) {
-        throw "Missing the required parameter 'json' when calling categorySubcategoriesGet";
-      }
-
-
-      var pathParams = {
-        'category': category,
-        'subcategories': subcategories
-      };
-      var queryParams = {
-        'json': json
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = Feed;
-
-      return this.apiClient.callApi(
-        '/{category}/{subcategories}/', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-
-    /**
-     * Pagination Categories
-     * Pagination Categories
-     * @param {String} category 
-     * @param {String} subcategories 
-     * @param {String} page 
-     * @param {Number} json 1 menu
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Feed}
-     */
-    this.categorySubcategoriesPagePageGet = function(category, subcategories, page, json) {
-      var postBody = null;
-
-      // verify the required parameter 'category' is set
-      if (category == undefined || category == null) {
-        throw "Missing the required parameter 'category' when calling categorySubcategoriesPagePageGet";
-      }
-
-      // verify the required parameter 'subcategories' is set
-      if (subcategories == undefined || subcategories == null) {
-        throw "Missing the required parameter 'subcategories' when calling categorySubcategoriesPagePageGet";
+      // verify the required parameter 'slug' is set
+      if (slug == undefined || slug == null) {
+        throw "Missing the required parameter 'slug' when calling getCategoryPostsGet";
       }
 
       // verify the required parameter 'page' is set
       if (page == undefined || page == null) {
-        throw "Missing the required parameter 'page' when calling categorySubcategoriesPagePageGet";
+        throw "Missing the required parameter 'page' when calling getCategoryPostsGet";
       }
 
-      // verify the required parameter 'json' is set
-      if (json == undefined || json == null) {
-        throw "Missing the required parameter 'json' when calling categorySubcategoriesPagePageGet";
+      // verify the required parameter 'count' is set
+      if (count == undefined || count == null) {
+        throw "Missing the required parameter 'count' when calling getCategoryPostsGet";
       }
 
 
       var pathParams = {
-        'category': category,
-        'subcategories': subcategories,
-        'page': page
       };
       var queryParams = {
-        'json': json
+        'slug': slug,
+        'page': page,
+        'count': count
       };
       var headerParams = {
       };
@@ -161,7 +102,52 @@
       var returnType = Feed;
 
       return this.apiClient.callApi(
-        '/{category}/{subcategories}/page/{page}/', 'GET',
+        '/get_category_posts/', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
+
+
+    /**
+     * Pagination Categories
+     * Pagination Categories
+     * @param {Number} page what page number we ask.
+     * @param {Number} count number per page
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Feed}
+     */
+    this.getRecentPostsGet = function(page, count) {
+      var postBody = null;
+
+      // verify the required parameter 'page' is set
+      if (page == undefined || page == null) {
+        throw "Missing the required parameter 'page' when calling getRecentPostsGet";
+      }
+
+      // verify the required parameter 'count' is set
+      if (count == undefined || count == null) {
+        throw "Missing the required parameter 'count' when calling getRecentPostsGet";
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+        'page': page,
+        'count': count
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = Feed;
+
+      return this.apiClient.callApi(
+        '/get_recent_posts/', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );
@@ -171,36 +157,36 @@
     /**
      * Free search
      * free search posts list
-     * @param {String} pageNum Pagination Free search query.
-     * @param {String} s Free search query.
-     * @param {Number} json Scope under which the request is made; determines fields present in response.
+     * @param {String} search Free search query.
+     * @param {Number} page what page number we ask.
+     * @param {Number} count number per page
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchFeed}
      */
-    this.pagePageNumGet = function(pageNum, s, json) {
+    this.getSearchResultsGet = function(search, page, count) {
       var postBody = null;
 
-      // verify the required parameter 'pageNum' is set
-      if (pageNum == undefined || pageNum == null) {
-        throw "Missing the required parameter 'pageNum' when calling pagePageNumGet";
+      // verify the required parameter 'search' is set
+      if (search == undefined || search == null) {
+        throw "Missing the required parameter 'search' when calling getSearchResultsGet";
       }
 
-      // verify the required parameter 's' is set
-      if (s == undefined || s == null) {
-        throw "Missing the required parameter 's' when calling pagePageNumGet";
+      // verify the required parameter 'page' is set
+      if (page == undefined || page == null) {
+        throw "Missing the required parameter 'page' when calling getSearchResultsGet";
       }
 
-      // verify the required parameter 'json' is set
-      if (json == undefined || json == null) {
-        throw "Missing the required parameter 'json' when calling pagePageNumGet";
+      // verify the required parameter 'count' is set
+      if (count == undefined || count == null) {
+        throw "Missing the required parameter 'count' when calling getSearchResultsGet";
       }
 
 
       var pathParams = {
-        'pageNum': pageNum
       };
       var queryParams = {
-        's': s,
-        'json': json
+        'search': search,
+        'page': page,
+        'count': count
       };
       var headerParams = {
       };
@@ -213,52 +199,7 @@
       var returnType = SearchFeed;
 
       return this.apiClient.callApi(
-        '/page/{pageNum}/', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType
-      );
-    }
-
-
-    /**
-     * Free search
-     * free search posts list
-     * @param {String} s Free search query.
-     * @param {Number} json Scope under which the request is made; determines fields present in response.
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/SearchFeed}
-     */
-    this.rootGet = function(s, json) {
-      var postBody = null;
-
-      // verify the required parameter 's' is set
-      if (s == undefined || s == null) {
-        throw "Missing the required parameter 's' when calling rootGet";
-      }
-
-      // verify the required parameter 'json' is set
-      if (json == undefined || json == null) {
-        throw "Missing the required parameter 'json' when calling rootGet";
-      }
-
-
-      var pathParams = {
-      };
-      var queryParams = {
-        's': s,
-        'json': json
-      };
-      var headerParams = {
-      };
-      var formParams = {
-      };
-
-      var authNames = [];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = SearchFeed;
-
-      return this.apiClient.callApi(
-        '/', 'GET',
+        '/get_search_results/', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );

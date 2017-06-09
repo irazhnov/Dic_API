@@ -59,40 +59,30 @@
   }
 
   describe('DefaultApi', function() {
-    describe('categorySubcategoriesGet', function() {
-      it('should call categorySubcategoriesGet successfully', function(done) {
-        //uncomment below and update the code to test categorySubcategoriesGet
-        //instance.categorySubcategoriesGet(pet, function(error) {
+    describe('getCategoryPostsGet', function() {
+      it('should call getCategoryPostsGet successfully', function(done) {
+        //uncomment below and update the code to test getCategoryPostsGet
+        //instance.getCategoryPostsGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('categorySubcategoriesPagePageGet', function() {
-      it('should call categorySubcategoriesPagePageGet successfully', function(done) {
-        //uncomment below and update the code to test categorySubcategoriesPagePageGet
-        //instance.categorySubcategoriesPagePageGet(pet, function(error) {
+    describe('getRecentPostsGet', function() {
+      it('should call getRecentPostsGet successfully', function(done) {
+        //uncomment below and update the code to test getRecentPostsGet
+        //instance.getRecentPostsGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('pagePageNumGet', function() {
-      it('should call pagePageNumGet successfully', function(done) {
-        //uncomment below and update the code to test pagePageNumGet
-        //instance.pagePageNumGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('rootGet', function() {
-      it('should call rootGet successfully', function(done) {
-        //uncomment below and update the code to test rootGet
-        //instance.rootGet(pet, function(error) {
+    describe('getSearchResultsGet', function() {
+      it('should call getSearchResultsGet successfully', function(done) {
+        //uncomment below and update the code to test getSearchResultsGet
+        //instance.getSearchResultsGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

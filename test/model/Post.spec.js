@@ -107,6 +107,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property url (base name: "url")', function() {
+      // uncomment below and update the code to test the property url
+      //var instane = new DicClient.Post();
+      //expect(instance).to.be();
+    });
+
     it('should have the property _date (base name: "date")', function() {
       // uncomment below and update the code to test the property _date
       //var instane = new DicClient.Post();

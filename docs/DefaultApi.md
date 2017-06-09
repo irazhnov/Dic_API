@@ -1,18 +1,17 @@
 # DicClient.DefaultApi
 
-All URIs are relative to *http://diabetesincontrol.com/*
+All URIs are relative to *http://diabetesincontrol.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**categorySubcategoriesGet**](DefaultApi.md#categorySubcategoriesGet) | **GET** /{category}/{subcategories}/ | Categories
-[**categorySubcategoriesPagePageGet**](DefaultApi.md#categorySubcategoriesPagePageGet) | **GET** /{category}/{subcategories}/page/{page}/ | Pagination Categories
-[**pagePageNumGet**](DefaultApi.md#pagePageNumGet) | **GET** /page/{pageNum}/ | Free search
-[**rootGet**](DefaultApi.md#rootGet) | **GET** / | Free search
+[**getCategoryPostsGet**](DefaultApi.md#getCategoryPostsGet) | **GET** /get_category_posts/ | Categories
+[**getRecentPostsGet**](DefaultApi.md#getRecentPostsGet) | **GET** /get_recent_posts/ | Pagination Categories
+[**getSearchResultsGet**](DefaultApi.md#getSearchResultsGet) | **GET** /get_search_results/ | Free search
 
 
-<a name="categorySubcategoriesGet"></a>
-# **categorySubcategoriesGet**
-> Feed categorySubcategoriesGet(category, subcategories, json)
+<a name="getCategoryPostsGet"></a>
+# **getCategoryPostsGet**
+> Feed getCategoryPostsGet(slug, page, count)
 
 Categories
 
@@ -24,13 +23,13 @@ var DicClient = require('dic-client');
 
 var apiInstance = new DicClient.DefaultApi();
 
-var category = "category_example"; // String | 
+var slug = "slug_example"; // String | 
 
-var subcategories = "subcategories_example"; // String | 
+var page = 1.2; // Number | what page number we ask.
 
-var json = 1.2; // Number | 1 menu
+var count = 1.2; // Number | number per page
 
-apiInstance.categorySubcategoriesGet(category, subcategories, json).then(function(data) {
+apiInstance.getCategoryPostsGet(slug, page, count).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -42,9 +41,9 @@ apiInstance.categorySubcategoriesGet(category, subcategories, json).then(functio
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category** | **String**|  | 
- **subcategories** | **String**|  | 
- **json** | **Number**| 1 menu | 
+ **slug** | **String**|  | 
+ **page** | **Number**| what page number we ask. | 
+ **count** | **Number**| number per page | 
 
 ### Return type
 
@@ -59,9 +58,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="categorySubcategoriesPagePageGet"></a>
-# **categorySubcategoriesPagePageGet**
-> Feed categorySubcategoriesPagePageGet(category, subcategories, page, json)
+<a name="getRecentPostsGet"></a>
+# **getRecentPostsGet**
+> Feed getRecentPostsGet(page, count)
 
 Pagination Categories
 
@@ -73,15 +72,11 @@ var DicClient = require('dic-client');
 
 var apiInstance = new DicClient.DefaultApi();
 
-var category = "category_example"; // String | 
+var page = 1.2; // Number | what page number we ask.
 
-var subcategories = "subcategories_example"; // String | 
+var count = 1.2; // Number | number per page
 
-var page = "page_example"; // String | 
-
-var json = 1.2; // Number | 1 menu
-
-apiInstance.categorySubcategoriesPagePageGet(category, subcategories, page, json).then(function(data) {
+apiInstance.getRecentPostsGet(page, count).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -93,10 +88,8 @@ apiInstance.categorySubcategoriesPagePageGet(category, subcategories, page, json
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **category** | **String**|  | 
- **subcategories** | **String**|  | 
- **page** | **String**|  | 
- **json** | **Number**| 1 menu | 
+ **page** | **Number**| what page number we ask. | 
+ **count** | **Number**| number per page | 
 
 ### Return type
 
@@ -111,9 +104,9 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="pagePageNumGet"></a>
-# **pagePageNumGet**
-> SearchFeed pagePageNumGet(pageNum, s, json)
+<a name="getSearchResultsGet"></a>
+# **getSearchResultsGet**
+> SearchFeed getSearchResultsGet(search, page, count)
 
 Free search
 
@@ -125,13 +118,13 @@ var DicClient = require('dic-client');
 
 var apiInstance = new DicClient.DefaultApi();
 
-var pageNum = "pageNum_example"; // String | Pagination Free search query.
+var search = "search_example"; // String | Free search query.
 
-var s = "s_example"; // String | Free search query.
+var page = 1.2; // Number | what page number we ask.
 
-var json = 1.2; // Number | Scope under which the request is made; determines fields present in response.
+var count = 1.2; // Number | number per page
 
-apiInstance.pagePageNumGet(pageNum, s, json).then(function(data) {
+apiInstance.getSearchResultsGet(search, page, count).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);
@@ -143,55 +136,9 @@ apiInstance.pagePageNumGet(pageNum, s, json).then(function(data) {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pageNum** | **String**| Pagination Free search query. | 
- **s** | **String**| Free search query. | 
- **json** | **Number**| Scope under which the request is made; determines fields present in response. | 
-
-### Return type
-
-[**SearchFeed**](SearchFeed.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="rootGet"></a>
-# **rootGet**
-> SearchFeed rootGet(s, json)
-
-Free search
-
-free search posts list
-
-### Example
-```javascript
-var DicClient = require('dic-client');
-
-var apiInstance = new DicClient.DefaultApi();
-
-var s = "s_example"; // String | Free search query.
-
-var json = 1.2; // Number | Scope under which the request is made; determines fields present in response.
-
-apiInstance.rootGet(s, json).then(function(data) {
-  console.log('API called successfully. Returned data: ' + data);
-}, function(error) {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **s** | **String**| Free search query. | 
- **json** | **Number**| Scope under which the request is made; determines fields present in response. | 
+ **search** | **String**| Free search query. | 
+ **page** | **Number**| what page number we ask. | 
+ **count** | **Number**| number per page | 
 
 ### Return type
 

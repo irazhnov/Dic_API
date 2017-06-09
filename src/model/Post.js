@@ -66,6 +66,7 @@
 
 
 
+
   };
 
   /**
@@ -99,6 +100,9 @@
       }
       if (data.hasOwnProperty('excerpt')) {
         obj['excerpt'] = ApiClient.convertToType(data['excerpt'], 'String');
+      }
+      if (data.hasOwnProperty('url')) {
+        obj['url'] = ApiClient.convertToType(data['url'], 'String');
       }
       if (data.hasOwnProperty('date')) {
         obj['date'] = ApiClient.convertToType(data['date'], 'String');
@@ -146,6 +150,10 @@
    * @member {String} excerpt
    */
   exports.prototype['excerpt'] = undefined;
+  /**
+   * @member {String} url
+   */
+  exports.prototype['url'] = undefined;
   /**
    * @member {String} date
    */

@@ -62,7 +62,7 @@
      * get geo json
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Geo}
      */
-    this.geoGeoJsonGet = function() {
+    this.geoGet = function() {
       var postBody = null;
 
 
@@ -81,7 +81,7 @@
       var returnType = Geo;
 
       return this.apiClient.callApi(
-        '/geo/geo.json', 'GET',
+        '/geo/', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType
       );

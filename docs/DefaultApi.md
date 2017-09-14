@@ -4,15 +4,15 @@ All URIs are relative to *http://diabetesincontrol.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**geoGeoJsonGet**](DefaultApi.md#geoGeoJsonGet) | **GET** /geo/geo.json | Get Geo
+[**geoGet**](DefaultApi.md#geoGet) | **GET** /geo/ | Get Geo
 [**getCategoryPostsGet**](DefaultApi.md#getCategoryPostsGet) | **GET** /get_category_posts/ | Categories
 [**getRecentPostsGet**](DefaultApi.md#getRecentPostsGet) | **GET** /get_recent_posts/ | Pagination Categories
 [**getSearchResultsGet**](DefaultApi.md#getSearchResultsGet) | **GET** /get_search_results/ | Free search
 
 
-<a name="geoGeoJsonGet"></a>
-# **geoGeoJsonGet**
-> Geo geoGeoJsonGet()
+<a name="geoGet"></a>
+# **geoGet**
+> Geo geoGet()
 
 Get Geo
 
@@ -23,7 +23,7 @@ get geo json
 var DicClient = require('dic-client');
 
 var apiInstance = new DicClient.DefaultApi();
-apiInstance.geoGeoJsonGet().then(function(data) {
+apiInstance.geoGet().then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
 }, function(error) {
   console.error(error);

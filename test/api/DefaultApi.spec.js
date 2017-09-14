@@ -59,10 +59,10 @@
   }
 
   describe('DefaultApi', function() {
-    describe('geoGeoJsonGet', function() {
-      it('should call geoGeoJsonGet successfully', function(done) {
-        //uncomment below and update the code to test geoGeoJsonGet
-        //instance.geoGeoJsonGet(pet, function(error) {
+    describe('geoGet', function() {
+      it('should call geoGet successfully', function(done) {
+        //uncomment below and update the code to test geoGet
+        //instance.geoGet(pet, function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

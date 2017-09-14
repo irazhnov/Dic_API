@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Error', 'model/Feed', 'model/SearchFeed'], factory);
+    define(['ApiClient', 'model/Geo', 'model/Error', 'model/Feed', 'model/SearchFeed'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../model/Error'), require('../model/Feed'), require('../model/SearchFeed'));
+    module.exports = factory(require('../ApiClient'), require('../model/Geo'), require('../model/Error'), require('../model/Feed'), require('../model/SearchFeed'));
   } else {
     // Browser globals (root is window)
     if (!root.DicClient) {
       root.DicClient = {};
     }
-    root.DicClient.DefaultApi = factory(root.DicClient.ApiClient, root.DicClient.Error, root.DicClient.Feed, root.DicClient.SearchFeed);
+    root.DicClient.DefaultApi = factory(root.DicClient.ApiClient, root.DicClient.Geo, root.DicClient.Error, root.DicClient.Feed, root.DicClient.SearchFeed);
   }
-}(this, function(ApiClient, Error, Feed, SearchFeed) {
+}(this, function(ApiClient, Geo, Error, Feed, SearchFeed) {
   'use strict';
 
   /**
@@ -55,6 +55,37 @@
   var exports = function(apiClient) {
     this.apiClient = apiClient || ApiClient.instance;
 
+
+
+    /**
+     * Get Geo
+     * get geo json
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Geo}
+     */
+    this.geoGeoJsonGet = function() {
+      var postBody = null;
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+      };
+
+      var authNames = [];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = Geo;
+
+      return this.apiClient.callApi(
+        '/geo/geo.json', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType
+      );
+    }
 
 
     /**

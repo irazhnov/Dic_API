@@ -39,7 +39,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new DicClient.DefaultApi();
+    instance = new DicClient.GeoPoints();
   });
 
   var getProperty = function(object, getter, property) {
@@ -58,47 +58,37 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('geoGeoJsonGet', function() {
-      it('should call geoGeoJsonGet successfully', function(done) {
-        //uncomment below and update the code to test geoGeoJsonGet
-        //instance.geoGeoJsonGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('GeoPoints', function() {
+    it('should create an instance of GeoPoints', function() {
+      // uncomment below and update the code to test GeoPoints
+      //var instane = new DicClient.GeoPoints();
+      //expect(instance).to.be.a(DicClient.GeoPoints);
     });
-    describe('getCategoryPostsGet', function() {
-      it('should call getCategoryPostsGet successfully', function(done) {
-        //uncomment below and update the code to test getCategoryPostsGet
-        //instance.getCategoryPostsGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property id (base name: "id")', function() {
+      // uncomment below and update the code to test the property id
+      //var instane = new DicClient.GeoPoints();
+      //expect(instance).to.be();
     });
-    describe('getRecentPostsGet', function() {
-      it('should call getRecentPostsGet successfully', function(done) {
-        //uncomment below and update the code to test getRecentPostsGet
-        //instance.getRecentPostsGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property latitude (base name: "latitude")', function() {
+      // uncomment below and update the code to test the property latitude
+      //var instane = new DicClient.GeoPoints();
+      //expect(instance).to.be();
     });
-    describe('getSearchResultsGet', function() {
-      it('should call getSearchResultsGet successfully', function(done) {
-        //uncomment below and update the code to test getSearchResultsGet
-        //instance.getSearchResultsGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property longitude (base name: "longitude")', function() {
+      // uncomment below and update the code to test the property longitude
+      //var instane = new DicClient.GeoPoints();
+      //expect(instance).to.be();
     });
+
+    it('should have the property radius (base name: "radius")', function() {
+      // uncomment below and update the code to test the property radius
+      //var instane = new DicClient.GeoPoints();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

@@ -25,12 +25,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Category', 'model/Error', 'model/Feed', 'model/FeedCategory', 'model/Post', 'model/PostAuthor', 'model/SearchFeed', 'api/DefaultApi'], factory);
+    define(['ApiClient', 'model/Category', 'model/Error', 'model/Feed', 'model/FeedCategory', 'model/Geo', 'model/GeoPoints', 'model/Post', 'model/PostAuthor', 'model/SearchFeed', 'api/DefaultApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Category'), require('./model/Error'), require('./model/Feed'), require('./model/FeedCategory'), require('./model/Post'), require('./model/PostAuthor'), require('./model/SearchFeed'), require('./api/DefaultApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/Category'), require('./model/Error'), require('./model/Feed'), require('./model/FeedCategory'), require('./model/Geo'), require('./model/GeoPoints'), require('./model/Post'), require('./model/PostAuthor'), require('./model/SearchFeed'), require('./api/DefaultApi'));
   }
-}(function(ApiClient, Category, Error, Feed, FeedCategory, Post, PostAuthor, SearchFeed, DefaultApi) {
+}(function(ApiClient, Category, Error, Feed, FeedCategory, Geo, GeoPoints, Post, PostAuthor, SearchFeed, DefaultApi) {
   'use strict';
 
   /**
@@ -90,6 +90,16 @@
      * @property {module:model/FeedCategory}
      */
     FeedCategory: FeedCategory,
+    /**
+     * The Geo model constructor.
+     * @property {module:model/Geo}
+     */
+    Geo: Geo,
+    /**
+     * The GeoPoints model constructor.
+     * @property {module:model/GeoPoints}
+     */
+    GeoPoints: GeoPoints,
     /**
      * The Post model constructor.
      * @property {module:model/Post}

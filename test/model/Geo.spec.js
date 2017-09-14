@@ -39,7 +39,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new DicClient.DefaultApi();
+    instance = new DicClient.Geo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -58,47 +58,19 @@
       object[property] = value;
   }
 
-  describe('DefaultApi', function() {
-    describe('geoGeoJsonGet', function() {
-      it('should call geoGeoJsonGet successfully', function(done) {
-        //uncomment below and update the code to test geoGeoJsonGet
-        //instance.geoGeoJsonGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('Geo', function() {
+    it('should create an instance of Geo', function() {
+      // uncomment below and update the code to test Geo
+      //var instane = new DicClient.Geo();
+      //expect(instance).to.be.a(DicClient.Geo);
     });
-    describe('getCategoryPostsGet', function() {
-      it('should call getCategoryPostsGet successfully', function(done) {
-        //uncomment below and update the code to test getCategoryPostsGet
-        //instance.getCategoryPostsGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property geolocations (base name: "geolocations")', function() {
+      // uncomment below and update the code to test the property geolocations
+      //var instane = new DicClient.Geo();
+      //expect(instance).to.be();
     });
-    describe('getRecentPostsGet', function() {
-      it('should call getRecentPostsGet successfully', function(done) {
-        //uncomment below and update the code to test getRecentPostsGet
-        //instance.getRecentPostsGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getSearchResultsGet', function() {
-      it('should call getSearchResultsGet successfully', function(done) {
-        //uncomment below and update the code to test getSearchResultsGet
-        //instance.getSearchResultsGet(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));
